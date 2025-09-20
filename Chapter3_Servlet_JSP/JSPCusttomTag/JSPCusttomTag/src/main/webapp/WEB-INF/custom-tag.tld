@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-jsptaglibrary_3_1.xsd"
+        version="3.1">
+    <description>Custom Tag Library</description>
+    <tlib-version>3.1</tlib-version>
+    <short-name>custom</short-name>
+    <uri>/WEB-INF/custom-tag</uri>
+
+    <!--Today Tag-->
+    <tag>
+        <name>today</name>
+        <tag-class>iuh.fit.se.TodayTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>format</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
+
+    <!-- Body Tag-->
+    <tag>
+        <name>repeat</name>
+        <tag-class>iuh.fit.se.BodyTag</tag-class>
+        <body-content>JSP</body-content>
+
+        <attribute>
+            <name>times</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>int</type>
+        </attribute>
+    </tag>
+</taglib>
